@@ -70,7 +70,7 @@
                     Hello!
                 </div>
                 <div class="row justify-content-center">
-<h1> Enter Employee Information</h1>
+<h1> Enter Applicant Information</h1>
 </div>
 <hr>
 
@@ -94,11 +94,11 @@
 </div>
 <div class ="form-group">
 <label for="Hourly Rate">Hourly Rate (in dollars): </label>
-    <input type="number" class="form-control" id="rate" name="rate"  required >
+    <input type="number" class="form-control" step="0.01" min="0" id="rate" name="rate"  required >
 </div>
 <div class ="form-group">
 <label for="Hours per Week">Hours per Week: </label>
-    <input type="number" class="form-control" id="hours" name="hours"  required >
+    <input type="number" class="form-control" min="0" max="120" id="hours" name="hours"  required >
 </div>
 <div class ="form-group">
 <label for="Phone Number">Phone Number: </label>
