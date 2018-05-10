@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
             html, body {
                 background-color: #fff;
@@ -49,16 +50,6 @@
                 font-size: 84px;
             }
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -75,7 +66,7 @@
                 <hr>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <form method="POST"  action="/create">
                             {{csrf_field() }}
                                 <div class ="form-group">
@@ -122,7 +113,7 @@
                                 @endforeach
                                 </ul>
                             </div>
-                        </div>
+                       <!-- </div>  -->
                     </div>
                 </div>
             </div>
