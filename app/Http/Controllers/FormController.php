@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Applicant;
+
 use App\Mail\FormCompleted;
 
 class FormController extends Controller
@@ -21,7 +23,11 @@ class FormController extends Controller
             'email' => 'required',
         ]);
 
-        \Mail::to('samzstanding@gmail.com')->send(new FormCompleted);
+       $applicant =  Applicant::create(request(['first_name', 'last_name', 'birth_date', 'rate', 'hours', 'telephone', 'email']));
+
+        \Mail::to('samzstanding@gmail.com')->send(new FormCompleted($applicant));
+
+        return redirect('/')->with('alert', 'Your information was saved successfully');
 
 
 
